@@ -27,7 +27,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/[locale]/rutas/[slug]">): Promise<Metadata> {
   const { locale, slug } = await params;
   const route = routeBySlug(slug);
-  if (!route || !isLocale(locale)) return {};
+  if (!route || route.status === "draft" || !isLocale(locale)) return {};
   return {
     title: t(route.name, locale),
     description: t(route.summary, locale),

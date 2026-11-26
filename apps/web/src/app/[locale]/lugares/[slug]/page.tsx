@@ -33,7 +33,7 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/lugares/[slug]">): Promise<Metadata> {
   const { locale, slug } = await params;
   const place = placeBySlug(slug);
-  if (!place || !isLocale(locale)) return {};
+  if (!place || place.status === "draft" || !isLocale(locale)) return {};
   const cover = place.media[0];
   return {
     title: t(place.name, locale),
