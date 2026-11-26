@@ -1,0 +1,23 @@
+node_modules
+.next
+.open-next
+.wrangler
+.turbo
+dist
+coverage
+*.log
+.env
+.env.*
+!.env.example
+.dev.vars
+.DS_Store
+# impeccable runtime dirs ignore themselves; config.local stays local
+.impeccable/config.local.json
+seed.local.sql
+.next-build
+
+# impeccable working files (screenshots, caches)
+.impeccable/review/
+.impeccable/hook.cache.json
+.impeccable/mocks/
+.impeccable/build/

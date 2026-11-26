@@ -1,0 +1,43 @@
+/*
+ * MoniGo — "Álbum de láminas" design tokens (Tailwind v4 @theme).
+ * Page fields are full color fields; each album page owns one.
+ */
+@theme {
+  /* Page fields */
+  --color-guayaba: #a3203f;
+  --color-guayaba-deep: #7e1730;
+  --color-bijao: #2f6b3a;
+  --color-bijao-deep: #224f2b;
+  --color-rio: #2e6f9e;
+  --color-rio-deep: #1f5378;
+  --color-panela: #c98a2b;
+  --color-panela-deep: #8f5f17;
+  --color-barro: #7a4a2e;
+  --color-barro-deep: #5a3420;
+  --color-pulpa: #f2879a;
+  --color-pulpa-deep: #c4566b;
+
+  /* Neutrals */
+  --color-lamina: #ffffff;
+  --color-papel: #eceee8;
+  --color-papel-2: #dde1d8;
+  --color-tinta: #1d1a1c;
+  --color-tinta-2: #4a4548;
+
+  /* Type */
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-atkinson), "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
+
+  /* Lámina geometry */
+  --radius-lamina: 6px;
+  --spacing-marco: 7px;
+
+  /* Paper shadows */
+  --shadow-lamina: 0 1px 0 rgb(29 26 28 / 0.08), 0 6px 14px -6px rgb(29 26 28 / 0.35);
+  --shadow-lamina-lift: 0 2px 0 rgb(29 26 28 / 0.06), 0 18px 30px -12px rgb(29 26 28 / 0.45);
+  --shadow-lamina-flat: 0 1px 0 rgb(29 26 28 / 0.1), 0 1px 2px rgb(29 26 28 / 0.15);
+
+  /* Motion: paper physics */
+  --ease-papel: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-salida: cubic-bezier(0.22, 1, 0.36, 1);
+}

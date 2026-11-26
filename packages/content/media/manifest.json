@@ -1,0 +1,62 @@
+[
+  {
+    "file": "basilica-moniquira.jpg",
+    "width": 1600,
+    "height": 2231,
+    "author": "Edisonalv",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basilica-moniquira.jpg",
+    "description": "Basílica Nuestra Señora del Rosario de Moniquirá"
+  },
+  {
+    "file": "panoramica-parque-moniquira.jpg",
+    "width": 1600,
+    "height": 242,
+    "author": "Petruss",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panoramica_Parque_Moniquira.JPG",
+    "description": "Panorámica del parque principal de Moniquirá, departamento de Boyacá, Colombia"
+  },
+  {
+    "file": "parque-moniquira-2.jpg",
+    "width": 1600,
+    "height": 1200,
+    "author": "Petruss",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parque_Moniquira_2.JPG",
+    "description": "Parque principal Moniquirá, departamento de Boyacá, Colombia"
+  },
+  {
+    "file": "parque-moniquira-3.jpg",
+    "width": 1600,
+    "height": 1200,
+    "author": "Petruss",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parque_Moniquira_3.JPG",
+    "description": "Parque principal Moniquirá, departamento de Boyacá, Colombia"
+  },
+  {
+    "file": "parque-moniquira-4.jpg",
+    "width": 1600,
+    "height": 1200,
+    "author": "Petruss",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parque_Moniquira_4.JPG",
+    "description": "Iglesia Moniquirá, departamento de Boyacá, Colombia"
+  },
+  {
+    "file": "rio-moniquira.jpg",
+    "width": 1600,
+    "height": 1200,
+    "author": "Petruss",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rio_Moniquira.JPG",
+    "description": "Río Moniquirá, en límites entre los municipios de Gachantivá (derecha) y Santa Sofía (izquierda), departamento de Boyacá, Colombia"
+  }
+]

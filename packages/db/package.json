@@ -1,0 +1,27 @@
+{
+  "name": "@monigo/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts"
+  },
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "seed:sql": "tsx src/seed.ts > seed.local.sql",
+    "test": "echo no-tests",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.4"
+  },
+  "devDependencies": {
+    "@monigo/config": "workspace:*",
+    "@monigo/content": "workspace:*",
+    "@cloudflare/workers-types": "^5.20261119.1",
+    "drizzle-kit": "0.31.11",
+    "tsx": "^4.20.0",
+    "typescript": "^5"
+  }
+}

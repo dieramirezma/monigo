@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "monigo",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  "routes": [{ "pattern": "monigo.dieramirezma.dev", "custom_domain": true }],
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://monigo.dieramirezma.dev"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "monigo-db",
+      // Fill in after `wrangler d1 create monigo-db` (see docs/infra.md)
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "../../packages/db/migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "monigo-media" }]
+}

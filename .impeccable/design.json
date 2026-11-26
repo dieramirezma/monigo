@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T00:00:00Z",
+  "title": "Design System: MoniGo",
+  "extensions": {
+    "colorMeta": {
+      "guayaba": { "role": "primary", "displayName": "Guayaba", "canonical": "#a3203f", "fieldInk": { "on-field": "#ffffff", "on-field-soft": "#f6d5dc", "field-deep": "#7e1730" }, "tonalRamp": ["#2e0912", "#561021", "#7e1730", "#a3203f", "#c24a65", "#d97b90", "#ecb3c0", "#f8e3e8"] },
+      "guayaba-deep": { "role": "primary", "displayName": "Guayaba Deep", "canonical": "#7e1730" },
+      "bijao": { "role": "secondary", "displayName": "Bijao", "canonical": "#2f6b3a", "fieldInk": { "on-field": "#ffffff", "on-field-soft": "#d3e6d4", "field-deep": "#224f2b" }, "tonalRamp": ["#0d1f11", "#17361d", "#224f2b", "#2f6b3a", "#4f8a59", "#7dac85", "#b2cfb6", "#e3eee4"] },
+      "bijao-deep": { "role": "secondary", "displayName": "Bijao Deep", "canonical": "#224f2b" },
+      "rio": { "role": "secondary", "displayName": "Río", "canonical": "#2e6f9e", "fieldInk": { "on-field": "#ffffff", "on-field-soft": "#d4e5f2", "field-deep": "#1f5378" }, "tonalRamp": ["#0b1f2e", "#143a56", "#1f5378", "#2e6f9e", "#5089b5", "#7fabcc", "#b5cfe3", "#e4eef6"] },
+      "rio-deep": { "role": "secondary", "displayName": "Río Deep", "canonical": "#1f5378" },
+      "barro": { "role": "secondary", "displayName": "Barro", "canonical": "#7a4a2e", "fieldInk": { "on-field": "#ffffff", "on-field-soft": "#efdccf", "field-deep": "#5a3420" }, "tonalRamp": ["#22140c", "#3d2516", "#5a3420", "#7a4a2e", "#9a6a4d", "#b9917a", "#d8bfae", "#f2e7df"] },
+      "barro-deep": { "role": "secondary", "displayName": "Barro Deep", "canonical": "#5a3420" },
+      "panela": { "role": "secondary", "displayName": "Panela", "canonical": "#c98a2b", "fieldInk": { "on-field": "#1d1a1c", "on-field-soft": "#3f2a0a", "field-deep": "#8f5f17" }, "tonalRamp": ["#2e1e06", "#5c3e0e", "#8f5f17", "#c98a2b", "#d9a554", "#e5c083", "#f0dab5", "#f9f0e1"] },
+      "panela-deep": { "role": "secondary", "displayName": "Panela Deep", "canonical": "#8f5f17" },
+      "pulpa": { "role": "secondary", "displayName": "Pulpa", "canonical": "#f2879a", "fieldInk": { "on-field": "#1d1a1c", "on-field-soft": "#4a1c26", "field-deep": "#c4566b" }, "tonalRamp": ["#3a1219", "#6e2a37", "#a04254", "#c4566b", "#f2879a", "#f6a9b6", "#facbd3", "#fdebee"] },
+      "pulpa-deep": { "role": "secondary", "displayName": "Pulpa Deep", "canonical": "#c4566b" },
+      "lamina": { "role": "neutral", "displayName": "Lámina White", "canonical": "#ffffff" },
+      "papel": { "role": "neutral", "displayName": "Papel Álbum", "canonical": "#eceee8", "fieldInk": { "on-field": "#1d1a1c", "on-field-soft": "#4a4548", "field-deep": "#dde1d8" }, "tonalRamp": ["#262823", "#44473f", "#6a6e64", "#93988c", "#bcc1b5", "#dde1d8", "#eceee8", "#f8f9f6"] },
+      "papel-2": { "role": "neutral", "displayName": "Papel Deep", "canonical": "#dde1d8" },
+      "tinta": { "role": "neutral", "displayName": "Tinta", "canonical": "#1d1a1c", "tonalRamp": ["#1d1a1c", "#2f2b2e", "#4a4548", "#6a6468", "#8d878b", "#b2adb0", "#d6d3d5", "#f1eff0"] },
+      "tinta-2": { "role": "neutral", "displayName": "Tinta Soft", "canonical": "#4a4548" }
+    },
+    "typographyMeta": {
+      "cartel-cover": { "displayName": "Cartel / Cover", "purpose": "Album cover title only; two lines, left-aligned. Utility: font-cartel." },
+      "cartel-page": { "displayName": "Cartel / Page", "purpose": "Album page names (Agua, Alturas, Pueblo, Memoria, Dulce, Descanso)." },
+      "cartel-section": { "displayName": "Cartel / Section", "purpose": "Papel section titles, place titles, route names (smaller clamps 2.2-4rem for sub-sections)." },
+      "rotulo": { "displayName": "Rótulo", "purpose": "Controls, nav, lámina names, page imperatives, chips. Utility: font-rotulo." },
+      "numero-lamina": { "displayName": "Número de lámina", "purpose": "Every album number: lámina numbers, circles, pins, counts, best hour, printed page numbers, progress." },
+      "body": { "displayName": "Body", "purpose": "Running text, 38-46ch measure; lead copy 19-20px." },
+      "label": { "displayName": "Fact term", "purpose": "Uppercase term of definition lists of facts only; never a kicker above headings." }
+    },
+    "shadows": [
+      { "name": "lamina", "value": "0 1px 0 rgb(29 26 28 / 0.08), 0 6px 14px -6px rgb(29 26 28 / 0.35)", "purpose": "Resting stickers, white buttons, album counter, route cards, map controls." },
+      { "name": "lamina-lift", "value": "0 2px 0 rgb(29 26 28 / 0.06), 0 18px 30px -12px rgb(29 26 28 / 0.45)", "purpose": "Hover/focus lift; mobile dock; start of pegar." },
+      { "name": "lamina-flat", "value": "0 1px 0 rgb(29 26 28 / 0.1), 0 1px 2px rgb(29 26 28 / 0.15)", "purpose": "End of pegar: sticker pressed into the album." },
+      { "name": "pin", "value": "0 2px 6px rgb(29 26 28 / 0.35)", "purpose": "Map pin at rest." },
+      { "name": "pin-active", "value": "0 0 0 3px #1d1a1c, 0 6px 14px rgb(29 26 28 / 0.45)", "purpose": "Selected map pin." }
+    ],
+    "motion": [
+      { "name": "ease-papel", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Paper physics: lámina hover, pegar, doblar, contador, pin scale." },
+      { "name": "ease-salida", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Shadows, slot washes, the pegar ghost flight." },
+      { "name": "lamina-hover", "value": "380ms ease-papel (rotate, translate -3px); shadow 380ms ease-salida", "purpose": "Lift and de-tilt to 40% of --rot." },
+      { "name": "pegar", "value": "520ms ease-papel: scale 1.06 + lift shadow -> 0.985 @55% -> 1 + flat shadow", "purpose": "Signature: sticking a lámina. Ghost copy flies 620ms to the visible [data-album-target], rotating -8deg then 4deg; state commits at 480ms." },
+      { "name": "doblar", "value": "320ms ease-papel: scale 0 -> 1 from bottom-right", "purpose": "Folded corner appears when stuck." },
+      { "name": "contador", "value": "420ms ease-papel: scale 1 -> 1.25 -> 1", "purpose": "Mi álbum counter bump on add." },
+      { "name": "reduced-motion", "value": "all animation/transition durations 1ms; pegar skips the flight", "purpose": "Instant state change under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Lámina",
+      "kind": "card",
+      "refersTo": "lamina",
+      "description": "The white-bordered 4:5 sticker with its number circle; tilts slightly when photographed, lifts on hover.",
+      "html": "<div style=\"background:#2e6f9e;padding:32px\"><a href=\"#\" class=\"ds-lamina\" style=\"--rot:-2.2deg\"><span class=\"ds-lamina-photo\"><span class=\"ds-lamina-num\">03</span></span><span class=\"ds-lamina-name\">Cascada El Cajón</span></a></div>",
+      "css": ".ds-lamina{--rot:0deg;display:block;width:180px;background:#fff;color:#1d1a1c;padding:7px 7px 7.7px;border-radius:6px;box-shadow:0 1px 0 rgb(29 26 28/.08),0 6px 14px -6px rgb(29 26 28/.35);rotate:var(--rot);text-decoration:none;transition:rotate 380ms cubic-bezier(.16,1,.3,1),translate 380ms cubic-bezier(.16,1,.3,1),box-shadow 380ms cubic-bezier(.22,1,.36,1)}.ds-lamina:hover,.ds-lamina:focus-visible{rotate:calc(var(--rot)*.4);translate:0 -3px;box-shadow:0 2px 0 rgb(29 26 28/.06),0 18px 30px -12px rgb(29 26 28/.45)}.ds-lamina:focus-visible{outline:3px solid #fff;outline-offset:3px}.ds-lamina-photo{position:relative;display:block;aspect-ratio:4/5;border-radius:3px;background:linear-gradient(160deg,#5089b5,#1f5378)}.ds-lamina-num{position:absolute;top:8px;left:8px;display:grid;place-items:center;width:32px;height:32px;border-radius:999px;background:#fff;color:#1d1a1c;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:15px;font-variant-numeric:tabular-nums;box-shadow:0 1px 2px rgb(0 0 0/.25)}.ds-lamina-name{display:block;padding:8px 2px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:15px;line-height:1.05}"
+    },
+    {
+      "name": "Printed slot (no licensed photo, unverified)",
+      "kind": "card",
+      "refersTo": "lamina",
+      "description": "Empty lámina printed on the page itself: field-deep tint, dashed ink outline, number, one line, best hour; ringed punched corner when unverified. Never filled with stock imagery.",
+      "html": "<div style=\"background:#2f6b3a;color:#fff;padding:32px\"><a href=\"#\" class=\"ds-slot\"><span class=\"ds-slot-hole\"></span><span class=\"ds-slot-num\">12</span><span class=\"ds-slot-text\">Mirador sobre el cañón del Suárez.</span><span class=\"ds-slot-hour\">5:30 pm</span><span class=\"ds-slot-name\">Alto del Granadillo</span></a></div>",
+      "css": ".ds-slot{position:relative;display:flex;flex-direction:column;width:170px;padding:7px;border-radius:6px;color:#fff;text-decoration:none;background:color-mix(in oklab,#224f2b 55%,transparent);outline:2px dashed color-mix(in oklab,#fff 45%,transparent);outline-offset:-2px;mask:radial-gradient(circle at calc(100% - 14px) 14px,transparent 5px,#000 5.6px);transition:background-color 250ms cubic-bezier(.22,1,.36,1),outline-color 250ms cubic-bezier(.22,1,.36,1)}.ds-slot:hover,.ds-slot:focus-visible{background:color-mix(in oklab,#224f2b 85%,transparent);outline-color:#fff}.ds-slot-hole{position:absolute;top:8px;right:8px;width:13px;height:13px;border-radius:999px;border:1.5px solid color-mix(in oklab,#fff 75%,transparent)}.ds-slot-num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:56px;line-height:1;opacity:.4;padding:4px}.ds-slot-text{margin-top:48px;padding:0 4px;font-size:13px;line-height:1.35;color:#d3e6d4}.ds-slot-hour{padding:4px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:15px}.ds-slot-name{padding:8px 2px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:15px;line-height:1.05}"
+    },
+    {
+      "name": "Primary Button (on field)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "White pill with Tinta Rótulo and paper shadow; the main action on any colored field.",
+      "html": "<div style=\"background:#a3203f;padding:32px\"><a href=\"#\" class=\"ds-btn-primary\">Abrir el mapa <svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 10h11m-4-4 4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:14px 28px;border-radius:999px;background:#fff;color:#1d1a1c;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:20px;letter-spacing:-.01em;box-shadow:0 1px 0 rgb(29 26 28/.08),0 6px 14px -6px rgb(29 26 28/.35);transition:box-shadow .2s}.ds-btn-primary:hover{box-shadow:0 2px 0 rgb(29 26 28/.06),0 18px 30px -12px rgb(29 26 28/.45)}.ds-btn-primary:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button (on field)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Transparent pill with a 2px inset white ring.",
+      "html": "<div style=\"background:#a3203f;padding:32px\"><a href=\"#\" class=\"ds-btn-secondary\">Ver rutas</a></div>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;min-height:52px;padding:14px 28px;border-radius:999px;color:#fff;text-decoration:none;box-shadow:inset 0 0 0 2px #fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:20px;transition:background .2s}.ds-btn-secondary:hover{background:color-mix(in oklab,white 12%,transparent)}.ds-btn-secondary:focus-visible{outline:3px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Primary Button (on papel)",
+      "kind": "button",
+      "refersTo": "button-primary-on-papel",
+      "description": "Tinta pill with white text on quiet papel sections.",
+      "html": "<div style=\"background:#eceee8;padding:32px\"><a href=\"#\" class=\"ds-btn-tinta\">Abrir el mapa completo</a></div>",
+      "css": ".ds-btn-tinta{display:inline-flex;align-items:center;min-height:52px;padding:14px 28px;border-radius:999px;background:#1d1a1c;color:#fff;text-decoration:none;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:20px}.ds-btn-tinta:hover{background:#4a4548}.ds-btn-tinta:focus-visible{outline:3px solid #1d1a1c;outline-offset:3px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "description": "Route facts: 2px current-color border pill in Rótulo.",
+      "html": "<div style=\"background:#c98a2b;color:#1d1a1c;padding:24px;display:flex;gap:8px\"><span class=\"ds-chip\">Fácil</span><span class=\"ds-chip\">A pie</span><span class=\"ds-chip\">3 paradas</span></div>",
+      "css": ".ds-chip{border:2px solid currentColor;border-radius:999px;padding:4px 12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:14px}"
+    },
+    {
+      "name": "Mi álbum counter",
+      "kind": "nav",
+      "refersTo": "album-counter",
+      "description": "Header target of the pegar flight: white pill with a Guayaba numbered badge that bumps on add.",
+      "html": "<div style=\"background:#a3203f;padding:24px\"><a href=\"#\" class=\"ds-counter\"><span class=\"ds-counter-n\">3</span><span class=\"ds-counter-l\">Mi álbum</span></a></div>",
+      "css": ".ds-counter{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;color:#1d1a1c;text-decoration:none;box-shadow:0 1px 0 rgb(29 26 28/.08),0 6px 14px -6px rgb(29 26 28/.35)}.ds-counter:focus-visible{outline:3px solid #fff;outline-offset:3px}.ds-counter-n{display:grid;place-items:center;height:32px;min-width:32px;padding:0 6px;border-radius:999px;background:#a3203f;color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:16px;transition:scale 420ms cubic-bezier(.16,1,.3,1)}.ds-counter:hover .ds-counter-n{scale:1.25}.ds-counter-l{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:15px}"
+    },
+    {
+      "name": "Mobile album dock",
+      "kind": "nav",
+      "refersTo": "album-dock",
+      "description": "Mobile-only Tinta bar pinned to the foot: last stuck láminas, label, progress; the pegar target on small screens.",
+      "html": "<a href=\"#\" class=\"ds-dock\"><span class=\"ds-dock-stack\"><span class=\"ds-dock-st\" style=\"rotate:-4deg;z-index:3\">03</span><span class=\"ds-dock-st\" style=\"rotate:3deg;z-index:2\">12</span><span class=\"ds-dock-st\" style=\"rotate:-2deg;z-index:1\">18</span></span><span class=\"ds-dock-txt\"><span class=\"ds-dock-l\">Mi álbum</span><span class=\"ds-dock-p\">3 de 25</span></span><svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 10h11m-4-4 4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-dock{display:flex;align-items:center;gap:12px;max-width:360px;padding:8px 16px 8px 8px;border-radius:14px;background:#1d1a1c;color:#fff;text-decoration:none;box-shadow:0 2px 0 rgb(29 26 28/.06),0 18px 30px -12px rgb(29 26 28/.45)}.ds-dock:focus-visible{outline:3px solid #1d1a1c;outline-offset:3px}.ds-dock-stack{display:flex}.ds-dock-st{position:relative;display:grid;place-items:center;width:38px;height:48px;margin-left:-12px;border:3px solid #fff;border-radius:3px;background:#eceee8;color:rgb(29 26 28/.5);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:13px}.ds-dock-st:first-child{margin-left:0}.ds-dock-txt{flex:1;min-width:0}.ds-dock-l{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-stretch:85%;font-size:17px;line-height:1.2}.ds-dock-p{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:14px;color:rgb(255 255 255/.75)}"
+    },
+    {
+      "name": "Map pin",
+      "kind": "custom",
+      "refersTo": "map-pin",
+      "description": "The lámina's numbered circle in its page color with a white border; ink follows the field.",
+      "html": "<div style=\"background:#eceee8;padding:24px;display:flex;gap:16px\"><button class=\"ds-pin\" style=\"--pin:#2e6f9e;--pin-ink:#fff\">03</button><button class=\"ds-pin\" style=\"--pin:#c98a2b;--pin-ink:#1d1a1c\">20</button><button class=\"ds-pin ds-pin-active\" style=\"--pin:#a3203f;--pin-ink:#fff\">16</button></div>",
+      "css": ".ds-pin{display:grid;place-items:center;width:38px;height:38px;border-radius:999px;background:var(--pin);color:var(--pin-ink);border:3px solid #fff;box-shadow:0 2px 6px rgb(29 26 28/.35);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-stretch:75%;font-size:15px;cursor:pointer;transition:scale 220ms cubic-bezier(.16,1,.3,1),box-shadow 220ms cubic-bezier(.22,1,.36,1)}.ds-pin:hover{scale:1.12}.ds-pin:focus-visible{outline:3px solid #1d1a1c;outline-offset:2px}.ds-pin-active{scale:1.25;box-shadow:0 0 0 3px #1d1a1c,0 6px 14px rgb(29 26 28/.45)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Álbum de Láminas",
+    "overview": "MoniGo is a sticker album of Moniquirá. Every place is a numbered lámina: a white-bordered 4:5 sticker with its number in a circle. Every category is an album page painted edge to edge in its own color field: Agua in Río, Alturas in Bijao, Pueblo in Guayaba, Memoria in Barro, Dulce in Panela, Descanso in Pulpa. The cover is a Guayaba field. Visitors flip through the pages, stick láminas into \"Mi álbum\", and the stuck láminas become their itinerary. The map uses the same object: a pin is the lámina's numbered circle in its page color.\n\nInk discipline does most of the work. A page holds only its field, white láminas, Tinta, and the field's own deep and soft tints. Each page states one imperative (\"Métete al agua\", \"Sube a mirar\"). Display type is huge, condensed, and extra bold, like a poster. Text is set in a hyperlegible sans for a mobile, weak-signal audience. Depth is paper: soft shadows under láminas, a slight hand-stuck tilt, a folded corner. Motion follows paper physics: short, damped, played once.\n\nState is shown by a mark on the lámina, not by color. A punched corner means unverified, a printed dashed slot means no licensed photo yet, and a folded corner means stuck in my album. Content truth is part of the visual system. Empty láminas stay honestly empty and are never filled with stock imagery, and every photograph carries its credit and license.",
+    "keyCharacteristics": [
+      "Full-bleed color fields, one per album page, carrying data-driven ink variables.",
+      "The white-bordered 4:5 lámina with a numbered circle is the one recurring object (sticker, map pin, route stop, wordmark \"o\").",
+      "Condensed extra-bold Bricolage display over Atkinson Hyperlegible Next text.",
+      "State shown as physical marks (punched, printed slot, folded), never as hue alone.",
+      "Paper shadows and small tilts. Motion is limited to \"pegar\", \"doblar\", and the counter bump.",
+      "Printed page numbers, page counts, and tabular figures everywhere."
+    ],
+    "rules": [
+      { "name": "The Total Ink Rule", "body": "An album page uses only its field, white láminas, Tinta, and its own `--field-deep` and `--on-field-soft`. Never put one page's color inside another page.", "section": "colors" },
+      { "name": "The Field Owns the Ink Rule", "body": "Inside a field, components take color from `--on-field` / `--on-field-soft` / `--field-deep`, never from hard-coded hex. The header never paints its own band. It inherits whatever field the page opens with.", "section": "colors" },
+      { "name": "The State Is a Mark Rule", "body": "Verification, photo availability, and album membership are shown as physical marks on the lámina (punched hole, printed dashed slot, folded corner). Each mark also has screen-reader text. Never encode these states as a tint.", "section": "colors" },
+      { "name": "The Numbers Are Display Rule", "body": "Every number a visitor reads as part of the album (lámina, page, count, hour) is set in `numero-lamina`, never in body type.", "section": "typography" },
+      { "name": "The Two Voices Rule", "body": "Bricolage is for titles, names, numbers, and controls. Atkinson is for sentences. Do not set paragraphs in Bricolage, and do not set titles in Atkinson.", "section": "typography" },
+      { "name": "The Hand-Stuck Rule", "body": "Photographed láminas tilt slightly (deterministic −2.2° to +2°). Printed empty slots sit at 0°, because they are part of the page and not stuck on it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do give every category page its own full-bleed field via `data-field`, and color everything inside it from `--on-field`, `--on-field-soft`, and `--field-deep`.",
+      "Do keep láminas at 4:5 with a 7px white frame, a 6px radius, and the numbered circle top-left.",
+      "Do show a missing photo as a printed slot (number, one line, best hour) and leave it honestly empty.",
+      "Do lead a page with a double-size lámina only when it has a real photograph.",
+      "Do credit every photograph with author, source, and linked license.",
+      "Do set every album number, count, hour, and page number in `numero-lamina` with tabular figures.",
+      "Do close each album page with its printed two-digit page number at the bottom outer corner.",
+      "Do tilt photographed láminas slightly and keep printed slots straight.",
+      "Do honor reduced motion as an instant state change."
+    ],
+    "donts": [
+      "Don't fill empty láminas with stock, generic, or AI imagery. An empty slot is the truthful state.",
+      "Don't enlarge an empty slot to lead size.",
+      "Don't mix two page fields inside one album page, or paint the header its own band.",
+      "Don't encode verification, photo, or album state with color alone. Use the punched, printed, and folded marks plus screen-reader text.",
+      "Don't use hard or offset block shadows. Depth is soft paper shadow only.",
+      "Don't set running text in Bricolage, or titles in Atkinson.",
+      "Don't shrink láminas below legibility on narrow screens. Drop columns instead.",
+      "Don't put small uppercase tracked kicker labels above headings. Uppercase tracking is reserved for definition-list terms."
+    ]
+  }
+}

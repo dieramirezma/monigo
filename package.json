@@ -1,0 +1,23 @@
+{
+  "name": "monigo",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev --filter=web",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:generate": "pnpm --filter @monigo/db generate",
+    "db:migrate:local": "pnpm --filter web db:migrate:local",
+    "db:seed:local": "pnpm --filter @monigo/db seed:sql && pnpm --filter web exec wrangler d1 execute monigo-db --local --file ../../packages/db/seed.local.sql"
+  },
+  "devDependencies": {
+    "@playwright/test": "~1.59.1",
+    "prettier": "^3.6.0",
+    "turbo": "2.11.13"
+  }
+}

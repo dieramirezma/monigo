@@ -1,0 +1,277 @@
+@import "tailwindcss";
+@import "@monigo/ui/tokens.css";
+
+@source "../../../../packages/content/src";
+
+/* ------------------------------------------------------------------ */
+/* Base & browser surfaces                                             */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+  html {
+    color: var(--color-tinta);
+    background: var(--color-papel);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scrollbar-color: var(--color-tinta-2) var(--color-papel);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: var(--color-pulpa);
+    color: var(--color-tinta);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-tinta);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* On colored album pages the focus ring goes white */
+  [data-field] :focus-visible {
+    outline-color: var(--color-lamina);
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.08em;
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-guayaba);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Display type: Bricolage condensed, extra bold                       */
+/* ------------------------------------------------------------------ */
+
+@utility font-cartel {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 75%;
+  font-variation-settings: "opsz" 96;
+  letter-spacing: -0.03em;
+}
+
+@utility font-rotulo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-stretch: 85%;
+  letter-spacing: -0.01em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Album page fields                                                   */
+/* ------------------------------------------------------------------ */
+
+[data-field="guayaba"] { --field: var(--color-guayaba); --field-deep: var(--color-guayaba-deep); --on-field: var(--color-lamina); --on-field-soft: #f6d5dc; }
+[data-field="bijao"]   { --field: var(--color-bijao);   --field-deep: var(--color-bijao-deep);   --on-field: var(--color-lamina); --on-field-soft: #d3e6d4; }
+[data-field="rio"]     { --field: var(--color-rio);     --field-deep: var(--color-rio-deep);     --on-field: var(--color-lamina); --on-field-soft: #d4e5f2; }
+[data-field="barro"]   { --field: var(--color-barro);   --field-deep: var(--color-barro-deep);   --on-field: var(--color-lamina); --on-field-soft: #efdccf; }
+[data-field="panela"]  { --field: var(--color-panela);  --field-deep: var(--color-panela-deep);  --on-field: var(--color-tinta);  --on-field-soft: #3f2a0a; }
+[data-field="pulpa"]   { --field: var(--color-pulpa);   --field-deep: var(--color-pulpa-deep);   --on-field: var(--color-tinta);  --on-field-soft: #4a1c26; }
+[data-field="papel"]   { --field: var(--color-papel);   --field-deep: var(--color-papel-2);      --on-field: var(--color-tinta);  --on-field-soft: var(--color-tinta-2); }
+
+[data-field] {
+  background-color: var(--field);
+  color: var(--on-field);
+}
+
+/* The faint printed grid of an album page: empty slot outlines, not decoration chrome */
+.pagina-trama {
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--on-field) 14%, transparent) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Lámina                                                              */
+/* ------------------------------------------------------------------ */
+
+.lamina {
+  --rot: 0deg;
+  position: relative;
+  background: var(--color-lamina);
+  padding: var(--spacing-marco);
+  padding-bottom: calc(var(--spacing-marco) * 1.1);
+  border-radius: var(--radius-lamina);
+  box-shadow: var(--shadow-lamina);
+  rotate: var(--rot);
+  color: var(--color-tinta);
+  transition:
+    rotate 380ms var(--ease-papel),
+    translate 380ms var(--ease-papel),
+    box-shadow 380ms var(--ease-salida);
+}
+
+a.lamina:hover,
+a.lamina:focus-visible {
+  rotate: calc(var(--rot) * 0.4);
+  translate: 0 -3px;
+  box-shadow: var(--shadow-lamina-lift);
+}
+
+/* State as a mark: punched corner = not field-verified */
+.lamina[data-unverified="true"] {
+  mask: radial-gradient(circle at calc(100% - 14px) 14px, transparent 5px, #000 5.6px);
+}
+
+/* State as a mark: empty slot (no licensed photo) */
+.lamina-vacia {
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 9px, color-mix(in oklab, var(--color-tinta) 5%, transparent) 9px 10px),
+    var(--color-papel);
+  outline: 2px dashed color-mix(in oklab, var(--color-tinta) 35%, transparent);
+  outline-offset: -6px;
+}
+
+/* State as a mark: folded corner = stuck in my album */
+.lamina-doblez {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-bottom-right-radius: var(--radius-lamina);
+  background: linear-gradient(135deg, var(--color-papel-2) 0 50%, transparent 50%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  filter: drop-shadow(-1px -1px 1px rgb(29 26 28 / 0.25));
+  transform-origin: 100% 100%;
+}
+
+.numero-lamina {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 75%;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* Motion                                                              */
+/* ------------------------------------------------------------------ */
+
+@keyframes pegar {
+  0% { scale: 1.06; box-shadow: var(--shadow-lamina-lift); }
+  55% { scale: 0.985; }
+  100% { scale: 1; box-shadow: var(--shadow-lamina-flat); }
+}
+
+@keyframes doblar {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@keyframes contador {
+  0% { scale: 1; }
+  40% { scale: 1.25; }
+  100% { scale: 1; }
+}
+
+.anim-pegar { animation: pegar 520ms var(--ease-papel) both; }
+.anim-doblar { animation: doblar 320ms var(--ease-papel) both; }
+.anim-contador { animation: contador 420ms var(--ease-papel); }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* MapLibre: theme the parts we did not draw */
+.maplibregl-ctrl-attrib {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  background: color-mix(in oklab, var(--color-papel) 85%, transparent) !important;
+}
+.maplibregl-ctrl-group {
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-lamina) !important;
+}
+
+/* Empty slot printed on the album page itself (no sticker yet): the page color, not paper */
+.lamina-slot {
+  --rot: 0deg;
+  position: relative;
+  display: block;
+  padding: var(--spacing-marco);
+  border-radius: var(--radius-lamina);
+  color: var(--on-field);
+  background: color-mix(in oklab, var(--field-deep) 55%, transparent);
+  outline: 2px dashed color-mix(in oklab, var(--on-field) 45%, transparent);
+  outline-offset: -2px;
+  transition: background-color 250ms var(--ease-salida), outline-color 250ms var(--ease-salida);
+}
+a.lamina-slot:hover,
+a.lamina-slot:focus-visible {
+  background: color-mix(in oklab, var(--field-deep) 85%, transparent);
+  outline-color: var(--on-field);
+}
+.lamina-slot[data-unverified="true"] {
+  mask: radial-gradient(circle at calc(100% - 14px) 14px, transparent 5px, #000 5.6px);
+}
+
+/* Map pin: the lámina's numbered circle, in its page color */
+.map-pin {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--pin);
+  color: var(--pin-ink);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgb(29 26 28 / 0.35);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 75%;
+  font-size: 15px;
+  cursor: pointer;
+  transition: scale 220ms var(--ease-papel), box-shadow 220ms var(--ease-salida);
+}
+.map-pin:hover { scale: 1.12; }
+.map-pin[data-active="true"] {
+  scale: 1.25;
+  box-shadow: 0 0 0 3px var(--color-tinta), 0 6px 14px rgb(29 26 28 / 0.45);
+  z-index: 2;
+}
+.map-pin:focus-visible { outline: 3px solid var(--color-tinta); outline-offset: 2px; }
+
+/* On printed slots the punched hole shows the same field behind it; ring it so the mark reads */
+.perforacion {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 13px;
+  height: 13px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in oklab, var(--on-field) 75%, transparent);
+}
