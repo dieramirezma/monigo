@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { baseOpenGraph, SHARE_IMAGE } from "@/lib/metadata";
 import "../globals.css";
 
 const bricolage = localFont({
@@ -42,7 +43,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     title: { default: d.meta.title, template: "%s · MoniGo" },
     description: d.meta.description,
     alternates: { languages: { es: "/es", en: "/en" } },
-    openGraph: { siteName: "MoniGo", locale: locale === "es" ? "es_CO" : "en_US", type: "website" },
+    openGraph: baseOpenGraph(locale),
+    twitter: { card: "summary_large_image", images: [SHARE_IMAGE] },
     icons: { icon: "/icon.svg" },
   };
 }

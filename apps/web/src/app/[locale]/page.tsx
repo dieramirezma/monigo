@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -11,6 +12,7 @@ import {
 } from "@monigo/content";
 import { href, isLocale, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { baseOpenGraph } from "@/lib/metadata";
 import { Lamina, MysterySlot } from "@/components/lamina";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -27,6 +29,16 @@ const COVER_STRIP = [
   "alto-el-granadillo",
   "rio-moniquira",
 ];
+
+export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return {};
+  const url = href(locale, "home");
+  return {
+    alternates: { canonical: url, languages: { es: href("es", "home"), en: href("en", "home") } },
+    openGraph: { ...baseOpenGraph(locale), url },
+  };
+}
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
   const { locale: raw } = await params;

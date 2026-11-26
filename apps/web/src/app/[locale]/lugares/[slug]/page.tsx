@@ -17,6 +17,7 @@ import {
 } from "@monigo/content";
 import { href, isLocale, locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { baseOpenGraph } from "@/lib/metadata";
 import { Lamina, mediaSrc } from "@/components/lamina";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -44,7 +45,14 @@ export async function generateMetadata({
     alternates: {
       languages: { es: href("es", "places", slug), en: href("en", "places", slug) },
     },
-    openGraph: cover ? { images: [{ url: mediaSrc(cover.file) }] } : undefined,
+    // Without a cover, keep the site-wide share image from baseOpenGraph.
+    openGraph: {
+      ...baseOpenGraph(locale),
+      ...(cover ? { images: [{ url: mediaSrc(cover.file) }] } : {}),
+    },
+    ...(cover
+      ? { twitter: { card: "summary_large_image", images: [{ url: mediaSrc(cover.file) }] } }
+      : {}),
   };
 }
 
