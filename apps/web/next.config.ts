@@ -10,8 +10,8 @@ const EN_SEGMENTS: Record<string, string> = {
 };
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Cache Components is not fully supported by OpenNext on Cloudflare yet (the Worker hangs on
+  // cross-request promises). The site is fully static, so classic SSG is the right model.
   transpilePackages: ["@monigo/content", "@monigo/db"],
   images: {
     loader: "custom",

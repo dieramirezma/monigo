@@ -24,6 +24,9 @@ const atkinson = localFont({
   display: "swap",
 });
 
+/** Only prerendered params exist; anything else is a 404 without rendering on the Worker. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }

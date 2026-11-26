@@ -20,6 +20,9 @@ import { Lamina } from "@/components/lamina";
 import { PocketMap } from "@/components/pocket-map";
 import { JsonLd } from "@/lib/json-ld";
 
+/** Only prerendered params exist; anything else is a 404 without rendering on the Worker. */
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) => publicRoutes().map((r) => ({ locale, slug: r.slug })));
 }
